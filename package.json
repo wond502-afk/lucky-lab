@@ -1,0 +1,15 @@
+{
+  "name": "lucky-lab-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "LUCKY LAB 로또 번호 생성기 및 당첨정보 서비스",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "set-domain": "node scripts/set-domain.mjs",
+    "preview": "npx wrangler pages dev public",
+    "deploy": "npx wrangler pages deploy public --project-name lucky-lab"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

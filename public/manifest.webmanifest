@@ -1,0 +1,16 @@
+{
+  "name": "LUCKY LAB 로또 번호 생성기",
+  "short_name": "LUCKY LAB",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070b14",
+  "theme_color": "#070b14",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
