@@ -1,5 +1,5 @@
 {
-  "name": "lucky-lab-v4",
+  "name": "pick45-v5",
   "private": true,
   "scripts": {
     "check": "node scripts-check.mjs"

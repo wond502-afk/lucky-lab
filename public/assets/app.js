@@ -54,9 +54,33 @@ function generate(){
   const count=+$("#count").value,sets=[],seen=new Set();
   while(sets.length<count){const a=makeOne(),k=a.join("-");if(!seen.has(k)){seen.add(k);sets.push(a)}}
   state.sets=sets;
-  $("#results").innerHTML=sets.map((a,i)=>`<div class="result reveal"><span class="set">${i<26?`SET ${String.fromCharCode(65+i)}`:`SET ${i+1}`}</span><div class="balls">${a.map(n=>ball(n)).join("")}</div><span class="result-stat">홀 ${a.filter(n=>n%2).length} · 짝 ${a.filter(n=>n%2===0).length}<br>합계 ${a.reduce((x,y)=>x+y,0)}</span><div class="result-actions"><button class="copy-one" data-nums="${a.join(",")}">📋 복사</button><button class="save-one" data-nums="${a.join(",")}">❤ 저장</button></div></div>`).join("");
-  $$(".copy-one").forEach(b=>b.onclick=async()=>{await navigator.clipboard.writeText(b.dataset.nums.replaceAll(",",", "));toast("번호를 복사했습니다.")});
-  $$(".save-one").forEach(b=>b.onclick=()=>saveNumbers(b.dataset.nums.split(",").map(Number)));
+  $("#results").innerHTML=sets.map((a,i)=>`<div class="result reveal"><span class="set">${i<26?`SET ${String.fromCharCode(65+i)}`:`SET ${i+1}`}</span><div class="balls">${a.map(n=>ball(n)).join("")}</div><span class="result-stat">홀 ${a.filter(n=>n%2).length} · 짝 ${a.filter(n=>n%2===0).length}<br>합계 ${a.reduce((x,y)=>x+y,0)}</span><div class="result-actions">
+  <button class="result-action copy-one" data-nums="${a.join(",")}" aria-label="번호 복사">
+    <span class="result-action-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg>
+    </span>
+    <span class="result-action-text">복사</span>
+  </button>
+  <button class="result-action save-one" data-nums="${a.join(",")}" aria-label="번호 저장">
+    <span class="result-action-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 20.5 4.8 13.7A5.2 5.2 0 0 1 12 6.2a5.2 5.2 0 0 1 7.2 7.5Z"/></svg>
+    </span>
+    <span class="result-action-text">저장</span>
+  </button>
+</div></div>`).join("");
+  $$(".copy-one").forEach(b=>b.onclick=async()=>{
+   await navigator.clipboard.writeText(b.dataset.nums.replaceAll(",",", "));
+   b.classList.add("done");
+   b.querySelector(".result-action-text").textContent="완료";
+   toast("번호를 복사했습니다.");
+   setTimeout(()=>{b.classList.remove("done");b.querySelector(".result-action-text").textContent="복사"},1300);
+  });
+  $$(".save-one").forEach(b=>b.onclick=()=>{
+   const nums=b.dataset.nums.split(",").map(Number);
+   saveNumbers(nums);
+   b.classList.add("done");
+   b.querySelector(".result-action-text").textContent="저장됨";
+  });
  }catch(e){toast(e.message)}
 }
 const saved=()=>JSON.parse(localStorage.getItem("luckySaved")||"[]");
@@ -92,16 +116,23 @@ function renderToday(force=false){
 $("#generate").onclick=generate;$("#reroll").onclick=generate;$("#todayReroll").onclick=()=>renderToday(true);
 $("#copyAll").onclick=async()=>{if(!state.sets.length)return toast("먼저 번호를 생성하세요.");await navigator.clipboard.writeText(state.sets.map((x,i)=>`${i+1}세트: ${x.join(", ")}`).join("\n"));toast("전체 번호를 복사했습니다.")};
 $("#share").onclick=async()=>{
- const btn=$("#share");
+ const btn=$("#share"),label=$("#shareLabel");
  try{
   if(navigator.share){
-   await navigator.share({title:"LUCKY LAB",text:"로또 번호 생성기 · 최신 당첨번호 · 회차조회",url:location.href});
+   await navigator.share({
+    title:"Pick45",
+    text:"로또 번호 생성기 · 최신 당첨번호 · 회차조회",
+    url:location.href
+   });
   }else{
    await navigator.clipboard.writeText(location.href);
-   btn.classList.add("copied");
-   btn.querySelector(".control-label").textContent="복사됨";
+   btn.classList.add("success");
+   label.textContent="링크 복사 완료";
    toast("사이트 주소를 복사했습니다.");
-   setTimeout(()=>{btn.classList.remove("copied");btn.querySelector(".control-label").textContent="공유"},1500);
+   setTimeout(()=>{
+    btn.classList.remove("success");
+    label.textContent="공유하기";
+   },1500);
   }
  }catch(e){}
 };
@@ -109,13 +140,20 @@ function applyTheme(theme){
  document.documentElement.dataset.theme=theme;
  localStorage.setItem("theme",theme);
  const label=$("#themeLabel");
- if(label)label.textContent=theme==="dark"?"다크":"라이트";
- $("#theme").setAttribute("aria-label",theme==="dark"?"라이트 모드로 변경":"다크 모드로 변경");
+ if(theme==="dark"){
+  label.textContent="라이트모드로 보기";
+  $("#theme").setAttribute("aria-label","라이트모드로 변경");
+ }else{
+  label.textContent="다크모드로 보기";
+  $("#theme").setAttribute("aria-label","다크모드로 변경");
+ }
 }
 const savedTheme=localStorage.getItem("theme");
 const systemDark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;
 applyTheme(savedTheme||(systemDark?"dark":"light"));
-$("#theme").onclick=()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+$("#theme").onclick=()=>{
+ applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+};
 if(!localStorage.getItem("cookieNotice"))$("#cookie").classList.add("show");$("#cookieOk").onclick=()=>{localStorage.setItem("cookieNotice","1");$("#cookie").classList.remove("show")};
 if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 loadDraws();generate();renderSaved();renderToday();

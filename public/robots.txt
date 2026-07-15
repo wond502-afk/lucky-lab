@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://lucky-lab-web.pages.dev/sitemap.xml
+Sitemap: https://pick45-web.pages.dev/sitemap.xml

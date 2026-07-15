@@ -1,1 +1,1 @@
-export async function onRequestGet(){return Response.json({ok:true,service:"lucky-lab-v4",time:new Date().toISOString()})}
+export async function onRequestGet(){return Response.json({ok:true,service:"pick45-v5",time:new Date().toISOString()})}

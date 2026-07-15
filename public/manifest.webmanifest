@@ -1,6 +1,6 @@
 {
-  "name": "LUCKY LAB 로또 번호 생성기",
-  "short_name": "LUCKY LAB",
+  "name": "Pick45 로또 번호 생성기",
+  "short_name": "Pick45",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#070b14",

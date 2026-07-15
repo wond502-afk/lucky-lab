@@ -1,4 +1,4 @@
-# LUCKY LAB V4
+# Pick45 V5
 
 Cloudflare Pages 배포용 로또 번호 생성·당첨정보 서비스입니다.
 
@@ -27,3 +27,11 @@ GitHub에 이 프로젝트 전체를 올리면 Cloudflare가 자동 재배포합
 - 모바일 레이아웃 및 카드 인터랙션 개선
 - 회차 검색 Enter 지원
 - API 로딩 상태 안내 개선
+
+
+## V5 리브랜딩
+- 브랜드명을 Pick45로 전면 변경
+- Pick45 전용 로고, 파비콘, OG 이미지
+- Hero, 최신 당첨정보, 번호 생성 UI 고급화
+- SEO 메타·PWA·정책 페이지 브랜드 통일
+- 기존 Cloudflare Pages 구조 유지
