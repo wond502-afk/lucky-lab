@@ -1,2 +1,2 @@
-# 애드센스 승인 후 실제 게시자 ID로 수정
+# 애드센스 승인 후 게시자 ID 입력
 # google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

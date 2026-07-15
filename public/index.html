@@ -1,118 +1,68 @@
 <!doctype html><html lang="ko" data-theme="dark"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#070b14"><meta name="description" content="LUCKY LAB에서 최신 로또 6/45 당첨번호, 회차별 조회, 번호 통계, AI 스타일 번호 생성기를 무료로 이용하세요.">
-<meta name="keywords" content="LUCKY LAB, 로또 번호 생성기, 최신 당첨번호, 회차조회, 로또 통계, AI 추천번호, 로또645"><meta name="robots" content="index,follow,max-image-preview:large">
-<meta property="og:type" content="website"><meta property="og:title" content="LUCKY LAB | 로또 번호 생성기 · 최신 당첨번호"><meta property="og:description" content="최신 당첨번호, 회차별 조회, 번호 통계와 스마트 번호 생성 서비스를 제공합니다."><meta property="og:image" content="assets/og.svg">
-<link rel="canonical" href="https://YOUR-DOMAIN.com/"><link rel="icon" href="assets/favicon.svg"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#070b14">
 <title>LUCKY LAB | 로또 번호 생성기 · 최신 당첨번호 · 회차조회</title>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"LUCKY LAB","applicationCategory":"UtilityApplication","operatingSystem":"All","description":"로또 6/45 당첨정보 조회와 번호 생성 서비스","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script></head><body>
-<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="logo">L</span>LUCKY LAB</a><nav class="main-nav"><a href="#latest">당첨정보</a><a href="#generator">번호생성</a><a href="#statistics">통계</a><a href="#guides">이용가이드</a></nav><div class="header-actions"><button class="icon-button" id="share" aria-label="공유">↗</button><button class="icon-button" id="themeButton" aria-label="테마">☀</button></div></div></header>
+<meta name="description" content="로또 번호 생성기, 로또 번호 추출기, 최신 당첨번호, 회차별 조회, 번호 통계를 회원가입 없이 무료로 이용하세요.">
+<meta name="keywords" content="로또,로또번호,로또 번호 생성기,로또 생성기,로또 추출기,로또 번호 추출기,최신 당첨번호,회차조회,로또 통계">
+<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://lucky-lab-web.pages.dev/">
+<meta property="og:type" content="website"><meta property="og:title" content="LUCKY LAB | 로또 번호 생성기"><meta property="og:description" content="최신 당첨번호, 회차조회, 번호 통계와 스마트 번호 생성"><meta property="og:image" content="https://lucky-lab-web.pages.dev/assets/og.svg">
+<link rel="icon" href="assets/favicon.svg"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"LUCKY LAB","url":"https://lucky-lab-web.pages.dev/","description":"로또 번호 생성기와 최신 당첨번호 조회 서비스","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"}}</script>
+</head><body>
+<header class="header"><div class="container header-inner"><a class="brand" href="index.html"><span class="logo">L</span>LUCKY LAB</a><nav class="nav"><a href="#generator">번호 생성</a><a href="#latest">당첨번호</a><a href="#statistics">번호 통계</a><a href="#guides">이용 가이드</a></nav><div class="header-actions">
+  <button class="header-control share-control" id="share" type="button" aria-label="사이트 공유" data-tooltip="공유">
+    <span class="control-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 3v11m0-11 4 4m-4-4L8 7M5 13v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></svg>
+    </span>
+    <span class="control-label">공유</span>
+  </button>
+  <button class="header-control theme-control" id="theme" type="button" aria-label="화면 테마 변경" data-tooltip="테마 변경">
+    <span class="theme-track" aria-hidden="true">
+      <span class="theme-thumb">
+        <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24"><path d="M20 15.2A8 8 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z"/></svg>
+      </span>
+    </span>
+    <span class="control-label" id="themeLabel">다크</span>
+  </button>
+</div></div></header>
 <main>
-<section class="container hero"><article class="panel hero-copy"><div><span class="eyebrow">LUCKY LAB · LOTTO 6/45</span><h1>오늘의 행운을<br><span class="gradient">가장 쉽고 빠르게.</span></h1>
-<p><strong class="hero-subtitle">LUCKY LAB · 로또 번호 생성기 · 최신 당첨번호 · 회차조회</strong>
-번호 생성, 당첨번호 확인, 회차별 검색, 번호 통계를 회원가입 없이 무료로 이용하세요.</p>
-<div class="hero-tags"><span>로또 번호 생성기</span><span>최신 당첨번호</span><span>회차조회</span><span>번호통계</span></div></div><div class="hero-buttons"><a class="button primary" href="#generator">번호 생성하기</a><a class="button secondary" href="#latest">최신 결과 보기</a></div></article>
-<article class="panel latest" id="latest"><div class="card-head"><div><span class="section-label">LATEST DRAW</span><h2 id="latestRound">제1232회</h2><p id="latestDate">2026년 7월 11일 추첨</p></div><span class="status" id="status">● 확인 중</span></div><div class="draw-row"><div class="balls" id="latestBalls"></div><span class="plus">+</span><div id="latestBonus"></div></div><div class="summary-grid"><div><span>1등 당첨자</span><strong id="winnerCount">11명</strong></div><div><span>1게임당 당첨금</span><strong id="firstPrize">2,533,260,819원</strong></div><div><span>다음 추첨까지</span><strong id="nextDraw">계산 중</strong></div><div><span>추첨 요일</span><strong>매주 토요일</strong></div></div><p class="muted" style="margin-top:13px">공개된 동행복권 당첨 결과를 기준으로 표시합니다.</p></article></section>
-<aside class="container ad-slot" aria-label="광고 영역"><!-- 애드센스 승인 후 이 안에 광고 코드를 삽입하세요. --></aside>
+<section class="container hero"><article class="panel hero-copy"><div><span class="eyebrow">LUCKY LAB · LOTTO 6/45</span><h1>오늘의 행운을<br><span class="gradient">가장 쉽고 빠르게.</span></h1><p><strong class="hero-sub">로또 번호 생성기 · 최신 당첨번호 · 회차조회</strong>로또 번호 생성, 최신 당첨번호 확인, 회차별 검색과 번호 통계를 한 화면에서 빠르게 이용하세요.</p><div class="hero-tags"><span>로또 번호</span><span>로또 생성기</span><span>로또 추출기</span><span>최신 당첨번호</span></div></div>
+<div class="trust-row">
+  <span>✓ 회원가입 없음</span>
+  <span>✓ 번호는 기기에만 저장</span>
+  <span>✓ 모바일 최적화</span>
+</div>
+<div class="actions"><a class="btn primary" href="#generator">✨ 번호 생성하기</a><a class="btn secondary" href="#latest">당첨번호 확인</a></div></article>
+<article class="panel latest" id="latest"><div class="head"><div><span class="label">LATEST DRAW</span><h2 id="latestRound">제1232회</h2><p id="latestDate">2026년 7월 11일 추첨</p></div><span class="status" id="status">● 확인 중</span></div><div class="draw"><div class="balls" id="latestBalls"></div><span class="plus">+</span><div id="latestBonus"></div></div><div class="summary"><div><span>1등 당첨자</span><strong id="winnerCount">11명</strong></div><div><span>1게임당 당첨금</span><strong id="firstPrize">2,533,260,819원</strong></div><div><span>다음 추첨까지</span><strong id="nextDraw">계산 중</strong></div><div><span>추첨 일정</span><strong>매주 토요일</strong></div></div><p style="color:var(--muted);font-size:10px;margin-top:13px">당첨 결과는 공개된 공식 정보를 기준으로 표시하며, 최종 확인은 공식 홈페이지를 이용하세요.</p></article></section>
 
-<section class="container today-pick panel">
-  <div>
-    <span class="section-label">TODAY'S PICK</span>
-    <h2>오늘의 추천 번호</h2>
-    <p>매일 새롭게 생성되는 재미용 랜덤 번호입니다.</p>
-  </div>
-  <div class="today-pick-main">
-    <div class="balls" id="todayBalls"></div>
-    <button class="button secondary" id="todayReroll">다시 추천</button>
-  </div>
+<section class="container quick-nav" aria-label="주요 기능 바로가기">
+  <a class="quick-card panel" href="#generator">
+    <span class="quick-icon">🎲</span>
+    <div><strong>번호 생성</strong><small>조건별 랜덤 번호</small></div>
+  </a>
+  <a class="quick-card panel" href="#latest">
+    <span class="quick-icon">🏆</span>
+    <div><strong>최신 당첨번호</strong><small>최근 추첨 결과</small></div>
+  </a>
+  <a class="quick-card panel" href="#statistics">
+    <span class="quick-icon">📊</span>
+    <div><strong>번호 통계</strong><small>최근 출현 빈도</small></div>
+  </a>
+  <a class="quick-card panel" href="#round-search">
+    <span class="quick-icon">🔎</span>
+    <div><strong>회차 조회</strong><small>과거 당첨번호 검색</small></div>
+  </a>
 </section>
 
-<section class="container dashboard"><article class="panel generator" id="generator"><div class="section-head"><div><span class="section-label">SMART GENERATOR</span><h2>스마트 번호 생성</h2><p>원하는 조합 조건으로 최대 10세트를 생성합니다.</p></div><div class="top-tools"><button class="mini" id="copy">전체 복사</button><button class="mini" id="reroll">다시 생성</button></div></div>
-<div class="form-grid"><label><span>생성 세트 수</span><select id="count"><option value="1">1세트</option><option value="3">3세트</option><option value="5" selected>5세트</option><option value="10">10세트</option></select></label><label><span>제외 번호</span><input id="exclude" placeholder="예: 3, 11, 28" maxlength="80"></label></div>
-<div class="options"><button class="chip active" data-key="balance">홀짝 균형</button><button class="chip active" data-key="spread">구간 분산</button><button class="chip active" data-key="ending">같은 끝수 제한</button><button class="chip" data-key="noConsecutive">연속번호 제외</button></div><button class="button primary generate" id="generate">✨ 번호 생성하기</button><div class="results" id="results"></div></article>
-<aside class="side"><article class="panel history"><div class="section-head"><div><span class="section-label">RECENT RESULTS</span><h2>최근 10회차</h2></div></div><div class="history-list" id="historyList"></div></article><article class="panel saved-card"><div class="section-head"><div><span class="section-label">MY NUMBERS</span><h2>저장한 번호</h2></div></div><div class="saved-list" id="savedList"></div></article></aside></section>
-<section class="container tools-grid" id="statistics"><article class="panel stats-card"><div class="section-head"><div><span class="section-label">FREQUENCY</span><h2>최근 번호 출현 TOP 8</h2><p>불러온 최근 회차를 기준으로 한 단순 빈도입니다.</p></div></div><div class="frequency-list" id="frequencyList"></div></article><article class="panel round-search"><div class="section-head"><div><span class="section-label">ROUND SEARCH</span><h2>회차별 당첨번호 검색</h2><p>확인하려는 회차를 입력하세요.</p></div></div><div class="round-form"><input id="roundInput" type="number" min="1" placeholder="예: 1232"><button class="button primary" id="roundButton">검색</button></div><div class="round-result" id="roundResult"></div></article></section>
-
-<section class="container guide-section" style="margin-top:28px">
-<div class="section-head">
-<div>
-<span class="section-label">LOTTO CONTENTS</span>
-<h2>한 곳에서 모두 이용하세요</h2>
-<p>검색과 이용이 편리하도록 주요 기능을 한곳에 모았습니다.</p>
-</div>
-</div>
-
-<div class="features">
-<article class="panel feature">
-<div class="feature-icon">🎲</div>
-<h3>로또 번호 생성</h3>
-<p>조건을 선택해 랜덤 번호를 빠르게 생성합니다.</p>
-</article>
-
-<article class="panel feature">
-<div class="feature-icon">🏆</div>
-<h3>최신 당첨번호 조회</h3>
-<p>최근 회차 당첨번호와 추첨일을 바로 확인하세요.</p>
-</article>
-
-<article class="panel feature">
-<div class="feature-icon">🔍</div>
-<h3>회차별 검색</h3>
-<p>원하는 회차의 당첨번호를 간편하게 조회합니다.</p>
-</article>
-
-<article class="panel feature">
-<div class="feature-icon">📊</div>
-<h3>번호 통계</h3>
-<p>최근 출현 빈도와 번호 패턴을 확인할 수 있습니다.</p>
-</article>
-
-<article class="panel feature">
-<div class="feature-icon">💡</div>
-<h3>이용 가이드</h3>
-<p>로또 이용 방법과 확률, 기본 정보를 제공합니다.</p>
-</article>
-
-<article class="panel feature">
-<div class="feature-icon">⭐</div>
-<h3>LUCKY LAB</h3>
-<p>로또 번호 생성기와 당첨번호 조회를 쉽고 빠르게 이용할 수 있는 플랫폼입니다.</p>
-</article>
-</div>
-</section>
-
-<section class="container features"><article class="panel feature"><span class="feature-icon">✓</span><h3>회원가입 없음</h3><p>개인정보 입력 없이 즉시 번호를 생성하고 저장할 수 있습니다.</p></article><article class="panel feature"><span class="feature-icon">⌁</span><h3>기기 내 번호 저장</h3><p>선택한 번호는 브라우저에만 저장되며 서버로 전송하지 않습니다.</p></article><article class="panel feature"><span class="feature-icon">↻</span><h3>최신 결과 자동 반영</h3><p>배포용 서버리스 API를 통해 최근 당첨 결과를 갱신합니다.</p></article></section>
-<section class="container guide-section" id="guides"><div class="section-head"><div><span class="section-label">ORIGINAL CONTENT</span><h2>로또 이용 가이드</h2><p>확률과 이용 방법을 이해하는 데 필요한 내용을 정리했습니다.</p></div></div><div class="guide-grid"><a class="guide-card panel" href="guides/lotto-probability.html"><small>GUIDE</small><h3>로또 번호는 어떻게 추첨될까?</h3><p>추첨 원리와 각 번호 조합의 확률을 쉽게 설명합니다.</p></a>
-<a class="guide-card panel" href="guides/auto-manual.html"><small>GUIDE</small><h3>자동·수동·반자동 차이</h3><p>세 가지 구매 방식의 차이와 흔한 오해를 정리했습니다.</p></a>
-<a class="guide-card panel" href="guides/statistics-guide.html"><small>GUIDE</small><h3>당첨번호 통계 보는 법</h3><p>출현 빈도 통계를 과신하지 않고 활용하는 방법입니다.</p></a>
-<a class="guide-card panel" href="guides/ticket-check.html"><small>GUIDE</small><h3>로또 용지 확인 방법</h3><p>번호, 회차, 추첨일과 QR 확인 시 주의사항을 안내합니다.</p></a>
-<a class="guide-card panel" href="guides/prize-guide.html"><small>GUIDE</small><h3>당첨금 수령 기본 안내</h3><p>당첨 등수별 확인과 보관 시 알아둘 기본 사항입니다.</p></a>
-<a class="guide-card panel" href="guides/responsible-play.html"><small>GUIDE</small><h3>책임 있게 복권 즐기기</h3><p>예산을 정하고 과몰입을 피하는 실천 방법을 소개합니다.</p></a></div></section>
-
-<section class="container seo-section">
-  <article class="panel content-card">
-    <span class="section-label">LOTTO GUIDE</span>
-    <h2>로또 번호 생성기와 당첨번호 조회를 한 곳에서</h2>
-    <p>LUCKY LAB은 로또 번호 생성기, 로또 번호 추출기, 최신 로또 당첨번호 조회, 회차별 당첨번호 검색, 번호 통계를 무료로 제공하는 서비스입니다.</p>
-    <div class="seo-grid">
-      <div><h3>로또 번호 생성기란?</h3><p>1부터 45까지 숫자 중 중복되지 않는 6개 번호를 무작위로 조합합니다. 홀짝 균형과 구간 분산 옵션으로 원하는 형태의 번호를 만들 수 있습니다.</p></div>
-      <div><h3>최신 당첨번호 확인</h3><p>최근 추첨 회차, 추첨일, 당첨번호, 보너스번호와 1등 당첨자 정보를 한눈에 확인할 수 있습니다.</p></div>
-      <div><h3>회차별 당첨번호 조회</h3><p>과거 회차 번호를 입력하면 해당 회차의 당첨번호와 추첨일을 조회할 수 있습니다.</p></div>
-      <div><h3>번호 통계 활용법</h3><p>출현 빈도는 과거 결과를 정리한 참고 자료입니다. 통계는 다음 회차의 당첨을 보장하지 않습니다.</p></div>
-    </div>
-  </article>
-
-  <article class="panel content-card faq">
-    <span class="section-label">FAQ</span>
-    <h2>자주 묻는 질문</h2>
-    <details open><summary>번호 생성은 완전한 무작위인가요?</summary><p>기본적으로 무작위이며, 선택한 홀짝·구간·끝수 조건을 만족하는 조합을 생성합니다.</p></details>
-    <details><summary>저장한 번호는 어디에 저장되나요?</summary><p>현재 사용 중인 브라우저의 로컬 저장소에만 저장되며 별도 서버로 전송되지 않습니다.</p></details>
-    <details><summary>많이 나온 번호가 다음에도 잘 나오나요?</summary><p>아닙니다. 각 추첨은 독립적이며 과거 출현 빈도가 다음 추첨 확률을 높이지 않습니다.</p></details>
-    <details><summary>생성된 번호가 당첨을 보장하나요?</summary><p>보장하지 않습니다. 모든 번호 조합의 1등 당첨 확률은 같습니다.</p></details>
-  </article>
-</section>
-
-<aside class="container ad-slot" aria-label="광고 영역"><!-- 애드센스 승인 후 이 안에 광고 코드를 삽입하세요. --></aside>
+<aside class="container ad-slot"><!-- 애드센스 승인 후 광고 코드 삽입 --></aside>
+<section class="container panel today"><div><span class="label">TODAY'S PICK</span><h2>오늘의 추천 번호</h2><p>오늘 날짜를 기준으로 저장되는 재미용 무작위 조합입니다.</p></div><div class="today-main"><div class="balls" id="todayBalls"></div><button class="btn secondary" id="todayReroll">다시 추천</button></div></section>
+<section class="container grid"><article class="panel generator" id="generator"><div class="head"><div><span class="label">SMART GENERATOR</span><h2>스마트 번호 생성</h2><p>원하는 조건을 선택해 최대 10세트까지 생성합니다.</p></div><div class="tools"><button class="mini" id="copyAll">전체 복사</button><button class="mini" id="reroll">다시 생성</button></div></div><div class="form-grid"><label><span>생성 세트 수</span><select id="count"><option value="1">1세트</option><option value="3">3세트</option><option value="5" selected>5세트</option><option value="10">10세트</option></select></label><label><span>제외 번호</span><input id="exclude" placeholder="예: 3, 11, 28" maxlength="80"></label></div><div class="chips"><button class="chip active" data-key="balance">홀짝 균형</button><button class="chip active" data-key="spread">구간 분산</button><button class="chip active" data-key="ending">같은 끝수 제한</button><button class="chip" data-key="noConsecutive">연속번호 제외</button></div><button class="btn primary generate" id="generate">✨ 번호 생성하기</button><div class="results" id="results"></div></article>
+<aside class="side"><article class="panel history"><div class="head"><div><span class="label">RECENT RESULTS</span><h2>최근 5회차</h2></div></div><div class="list" id="historyList"></div></article><article class="panel saved"><div class="head"><div><span class="label">MY NUMBERS</span><h2>저장한 번호</h2></div></div><div class="list" id="savedList"></div></article></aside></section>
+<section class="container tool-grid" id="statistics"><article class="panel stats"><div class="head"><div><span class="label">FREQUENCY</span><h2>최근 출현 빈도 TOP 10</h2><p>불러온 최근 회차 기준 단순 통계입니다.</p></div></div><div class="frequency" id="frequency"></div></article><article class="panel round" id="round-search"><div class="head"><div><span class="label">ROUND SEARCH</span><h2>회차별 당첨번호 조회</h2><p>확인하려는 회차를 입력하세요.</p></div></div><div class="round-form"><input id="roundInput" type="number" min="1" placeholder="예: 1232"><button class="btn primary" id="roundButton">검색</button></div><div class="round-result" id="roundResult"></div></article></section>
+<section class="container feature-grid"><article class="panel feature"><span class="feature-icon">✓</span><h3>회원가입 없음</h3><p>개인정보를 입력하지 않고 즉시 이용할 수 있습니다.</p></article><article class="panel feature"><span class="feature-icon">♡</span><h3>번호 저장</h3><p>선택한 번호는 현재 브라우저 안에만 저장됩니다.</p></article><article class="panel feature"><span class="feature-icon">↻</span><h3>최신 결과 반영</h3><p>서버리스 API를 통해 최근 결과를 자동으로 갱신합니다.</p></article></section>
+<section class="container" id="guides" style="margin-top:20px"><div class="head"><div><span class="label">ORIGINAL CONTENT</span><h2>로또 이용 가이드</h2><p>확률과 이용 방법을 올바르게 이해하는 데 필요한 글입니다.</p></div></div><div class="guide-grid"><a class="panel guide-card" href="guides/lotto-probability.html"><small>GUIDE</small><h3>로또 번호는 어떻게 추첨될까?</h3><p>추첨 원리와 1등 확률을 이해하기 쉽게 설명합니다.</p></a><a class="panel guide-card" href="guides/auto-manual.html"><small>GUIDE</small><h3>자동·수동·반자동 차이</h3><p>구매 방식의 차이와 흔한 오해를 정리했습니다.</p></a><a class="panel guide-card" href="guides/statistics.html"><small>GUIDE</small><h3>당첨번호 통계 보는 법</h3><p>출현 빈도와 미출현 기간을 과신하지 않는 방법입니다.</p></a><a class="panel guide-card" href="guides/ticket-check.html"><small>GUIDE</small><h3>로또 용지 확인 방법</h3><p>회차, 번호, QR 확인 시 주의사항을 안내합니다.</p></a><a class="panel guide-card" href="guides/prize-guide.html"><small>GUIDE</small><h3>당첨금 수령 기본 안내</h3><p>당첨 후 복권 보관과 공식 확인 절차를 안내합니다.</p></a><a class="panel guide-card" href="guides/responsible-play.html"><small>GUIDE</small><h3>책임 있게 복권 즐기기</h3><p>예산을 정하고 과몰입을 피하는 방법을 소개합니다.</p></a></div></section>
+<section class="container seo"><article class="panel content"><span class="label">LOTTO INFORMATION</span><h2>로또 번호 생성기와 당첨번호 조회를 한 곳에서</h2><p>LUCKY LAB은 로또 번호 생성기, 로또 번호 추출기, 최신 로또 당첨번호 조회, 회차별 당첨번호 검색, 번호 통계를 무료로 제공하는 로또 정보 서비스입니다.</p><div class="seo-grid"><div><h3>로또 번호 생성기</h3><p>1부터 45까지 중복되지 않는 6개 번호를 무작위로 조합합니다.</p></div><div><h3>최신 당첨번호</h3><p>최근 회차와 추첨일, 당첨번호와 보너스번호를 확인할 수 있습니다.</p></div><div><h3>회차별 조회</h3><p>과거 회차를 입력해 해당 당첨 결과를 검색할 수 있습니다.</p></div><div><h3>번호 통계</h3><p>최근 출현 빈도를 참고용으로 확인할 수 있습니다.</p></div></div></article><article class="panel faq"><span class="label">FAQ</span><h2>자주 묻는 질문</h2><details open><summary>번호 생성은 무작위인가요?</summary><p>무작위 번호 중 선택한 조건을 만족하는 조합을 생성합니다.</p></details><details><summary>추천 번호가 당첨을 예측하나요?</summary><p>아닙니다. 추천과 통계는 재미와 선택 편의를 위한 기능이며 당첨을 보장하지 않습니다.</p></details><details><summary>저장 번호는 어디에 보관되나요?</summary><p>현재 기기의 브라우저 로컬 저장소에만 보관됩니다.</p></details><details><summary>자주 나온 숫자가 유리한가요?</summary><p>각 추첨은 독립적이므로 과거 빈도가 다음 회차 당첨 확률을 높이지 않습니다.</p></details></article></section>
+<aside class="container ad-slot"><!-- 애드센스 승인 후 광고 코드 삽입 --></aside>
 </main>
-<footer class="footer"><div class="container footer-main"><div><a class="brand" href="index.html"><span class="logo">L</span>LUCKY LAB</a><p class="muted">비공식 로또 정보·번호 생성 서비스</p></div><nav class="footer-nav"><a href="#generator">번호 생성기</a><a href="#latest">최신 당첨번호</a><a href="#statistics">번호 통계</a><a href="#guides">이용 가이드</a><a href="contact.html">문의</a><a href="privacy.html">개인정보처리방침</a><a href="terms.html">이용약관</a></nav></div><div class="container footer-copy">본 사이트는 동행복권·복권위원회와 관련 없는 비공식 서비스입니다. 생성 번호는 당첨을 보장하지 않습니다. © 2026 LUCKY LAB.</div></footer>
-<div class="toast" id="toast"></div><div class="cookie" id="cookie"><p>서비스 품질 및 향후 광고 제공을 위해 쿠키가 사용될 수 있습니다. 자세한 내용은 개인정보처리방침에서 확인할 수 있습니다.</p><button class="button primary" id="cookieOk">확인</button></div><script src="assets/app.js" defer></script></body></html>
+<footer class="footer"><div class="container footer-main"><div><a class="brand" href="index.html"><span class="logo">L</span>LUCKY LAB</a><p style="color:var(--muted);font-size:12px">비공식 로또 정보·번호 생성 서비스</p></div><nav class="footer-nav"><a href="#generator">번호 생성기</a><a href="#latest">최신 당첨번호</a><a href="#statistics">번호 통계</a><a href="#guides">이용 가이드</a><a href="about.html">소개</a><a href="contact.html">문의</a><a href="privacy.html">개인정보처리방침</a><a href="terms.html">이용약관</a></nav></div><div class="container copy">본 사이트는 동행복권·복권위원회와 관련 없는 비공식 서비스입니다. 생성 번호는 당첨을 보장하지 않습니다. © 2026 LUCKY LAB.</div></footer>
+<div class="toast" id="toast"></div><div class="cookie" id="cookie"><p>서비스 품질 및 향후 광고 제공을 위해 쿠키가 사용될 수 있습니다. 자세한 내용은 개인정보처리방침을 확인하세요.</p><button class="btn primary" id="cookieOk">확인</button></div><script src="assets/app.js" defer></script></body></html>

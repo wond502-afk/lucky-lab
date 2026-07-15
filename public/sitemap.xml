@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DOMAIN.com/</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/about.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/contact.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/privacy.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/terms.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/guides/lotto-probability.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/guides/auto-manual.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/guides/statistics-guide.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/guides/ticket-check.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/guides/prize-guide.html</loc></url>
-  <url><loc>https://YOUR-DOMAIN.com/guides/responsible-play.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/about.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/contact.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/privacy.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/terms.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/guides/lotto-probability.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/guides/auto-manual.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/guides/statistics.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/guides/ticket-check.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/guides/prize-guide.html</loc></url>
+<url><loc>https://lucky-lab-web.pages.dev/guides/responsible-play.html</loc></url>
 </urlset>
