@@ -2,6 +2,6 @@
   "name": "pick45-v5",
   "private": true,
   "scripts": {
-    "check": "node scripts-check.mjs"
+    "check": "node scripts/check.mjs"
   }
 }

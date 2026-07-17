@@ -1,0 +1,11 @@
+Google Search Console 사이트맵 Couldn't fetch 우회 수정본
+
+수정 내용
+1. 새 사이트맵 주소 생성: /sitemap-pages.xml
+2. robots.txt가 새 사이트맵 주소를 가리키도록 변경
+3. sitemap/robots에 직접 지정한 Content-Type 및 Cache-Control 제거
+   - Cloudflare Pages의 기본 MIME 처리를 사용
+4. npm check 스크립트 경로 오류 수정
+
+배포 후 Search Console에서 기존 sitemap.xml을 다시 제출하지 말고,
+sitemap-pages.xml 을 새로 제출하세요.

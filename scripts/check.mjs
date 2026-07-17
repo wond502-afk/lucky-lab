@@ -10,6 +10,7 @@ const required = [
   "public/contact.html",
   "public/robots.txt",
   "public/sitemap.xml",
+  "public/sitemap-pages.xml",
   "public/ads.txt",
   "functions/api/lotto.js",
   "functions/api/health.js",
